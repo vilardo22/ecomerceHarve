@@ -1,0 +1,49 @@
+.navbar {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 0.5px solid #dad6d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .logo img {
+    width: 50px; /* Ajuste o tamanho do logotipo conforme necessário */
+    
+  }
+  
+  .navbuttons { /* Corrigido o nome da classe aqui */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+  }
+  
+  .navbuttons a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px; /* Espaçamento entre os botões */
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg, #f06, #9f6);
+    transition: background-image 0.3s ease;
+  }
+  
+  /* Efeito de gradiente neon ao passar o mouse */
+  .navbuttons a:hover {
+    background-image: linear-gradient(45deg, #f06, #9f6);
+    background-size: 200% 100%;
+    animation: gradientNeon 1s linear infinite;
+  }
+  
+  @keyframes gradientNeon {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
