@@ -1,6 +1,6 @@
 import React from "react";
 import { toast } from "react-toastify";
-import api from "../_Service/api";
+//import api from "../_Service/api";
 import Styles from "./cardproduto.module.css"; // Importe seu arquivo CSS
 
 function CardProduto({ produto }) {
