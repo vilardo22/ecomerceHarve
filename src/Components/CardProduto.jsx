@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { toast } from "react-toastify";
 //import api from "../_Service/api";
 import Styles from "./cardproduto.module.css"; // Importe seu arquivo CSS
+import { CarrinhoContext } from "../hooks/CarrinhoContext";
 
 function CardProduto({ produto }) {
-  async function adicionarProdutoAoCarrinho(id) {
+  const {adicionarCarrinho} = useContext(CarrinhoContext)
+  async function adicionarProdutoAoCarrinho(idProduto, nomeProduto, precoProduto, descricaoProduto) {
     try {
-      // Lógica para adicionar o produto ao carrinho aqui
-      // Você pode fazer uma chamada API para adicionar o produto ao carrinho, por exemplo
-      // Certifique-se de implementar essa lógica conforme necessário
-      // Em caso de erro, você pode mostrar uma mensagem de erro com toast.error
-      toast.success("Produto adicionado ao carrinho com sucesso!");
+      
+      adicionarCarrinho(
+        {idProduto, nomeProduto, precoProduto, descricaoProduto}
+      )
     } catch (error) {
       toast.error("Erro ao adicionar o produto ao carrinho.");
     }
@@ -21,7 +22,7 @@ function CardProduto({ produto }) {
       <img src={produto.image} alt={produto.title} />
       <h3>{produto.title}</h3>
       <p>Preço: R$ {produto.price}</p>
-      <button onClick={() => adicionarProdutoAoCarrinho(produto.id)}>Adicionar ao Carrinho</button>
+      <button onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Adicionar ao Carrinho</button>
     </div>
   );
 }

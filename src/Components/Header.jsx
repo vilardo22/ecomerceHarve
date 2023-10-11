@@ -1,23 +1,29 @@
-import React from 'react'
-import Styles from "./header.module.css"
+import { Container, Nav,  Navbar } from "react-bootstrap";
+import { GerenciadorLogin } from "./GerenciadorLogin";
 
-const Header = () => {
+
+
+
+function Header(props) {
   return (
-    <nav className={Styles.navbar}>
-    <div className={Styles.logo}>
-      <img src="logo.png" alt="Logo" />
-    </div>
-    <div className={Styles.navbuttons}>
-      <a href="/login">Login</a>
-      <a href="#">Botão 2</a>
-      <a href="#">Botão 3</a>
-      <a href="#">Botão 4</a>
-      <a href="#">Botão 5</a>
-    </div>
-  
-  </nav>
-  
-  )
+    <Container>
+      <Navbar bg="dark" variant="dark" fixed="top">
+        <Container>
+          <Navbar.Brand href="/home">E-Commerce</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/produtos">Produtos</Nav.Link>
+          </Nav>
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              <GerenciadorLogin />
+            </Navbar.Text>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      <div style={{ marginTop: "100px" }}>{props.children}</div>
+    </Container>
+  );
 }
 
-export default Header
+export default Header;
