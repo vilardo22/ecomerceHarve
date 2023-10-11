@@ -1,19 +1,16 @@
 
-import Carrossel from './Components/Carrossel';
-import Header from './Components/Header';
-import { ListaProdutos } from './Components/ListaProdutos';
-import Welcome from './Components/Welcome';
+
+import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import { RouteApp } from './router/Rotas';
 
 function App() {
   return (
-    <div >
-      <Header/>
-      <Carrossel/>
-      <Welcome />
-     <ListaProdutos/>
+    < >
+      <RouteApp/>
       <ToastContainer />
-    </div>
+      
+    </>
   );
 }
 

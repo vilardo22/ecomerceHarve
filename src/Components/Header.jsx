@@ -8,7 +8,7 @@ const Header = () => {
       <img src="logo.png" alt="Logo" />
     </div>
     <div className={Styles.navbuttons}>
-      <a href="#">Botão 1</a>
+      <a href="/login">Login</a>
       <a href="#">Botão 2</a>
       <a href="#">Botão 3</a>
       <a href="#">Botão 4</a>
