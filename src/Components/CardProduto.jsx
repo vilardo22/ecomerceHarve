@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 //import api from "../_Service/api";
 import Styles from "./cardproduto.module.css"; // Importe seu arquivo CSS
 import { CarrinhoContext } from "../hooks/CarrinhoContext";
+import Button from 'react-bootstrap/Button';
 
 function CardProduto({ produto }) {
   const {adicionarCarrinho} = useContext(CarrinhoContext)
@@ -22,7 +23,8 @@ function CardProduto({ produto }) {
       <img src={produto.image} alt={produto.title} />
       <h3>{produto.title}</h3>
       <p>Preço: R$ {produto.price}</p>
-      <button onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Adicionar ao Carrinho</button>
+      <Button variant="outline-secondary" onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Secondary</Button>
+      {/* <button onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Adicionar ao Carrinho</button> */}
     </div>
   );
 }

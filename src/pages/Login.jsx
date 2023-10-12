@@ -2,6 +2,7 @@ import { useState } from "react";
 import Styles from "../Components/login.module.css";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Header from "../Components/Header";
 
 function Login() {
   const navigate = useNavigate();
@@ -77,6 +78,7 @@ function Login() {
 
   return (
     <>
+      <Header/>
       <div className={Styles.logincontainer}>
         <h2>Login</h2>
         <form onSubmit={submitDoFormulario}>
