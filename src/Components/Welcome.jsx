@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 
 import Styles from './welcome.module.css';
 import img1 from "./../assets/images/banner1.jpg";
-import img2 from "./../assets/images/banner2.jpg";
+import img2 from "./../assets/images/banner3.png";
 
 
 
