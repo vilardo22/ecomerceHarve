@@ -1,11 +1,11 @@
 .card {
   margin-top: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #f100e5;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
   max-width: 250px; /* Largura máxima para cada cartão */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(219, 9, 226, 0.2);
   text-align: center;
   background-color: #fff;
 }
@@ -28,7 +28,7 @@
 .listaprodutos {
   display: flex;
   flex-wrap: wrap;
-  margin: 100px;
+  margin: 110px;
   justify-content: space-between;
   
 }

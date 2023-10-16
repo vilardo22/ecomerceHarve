@@ -80,6 +80,7 @@ function Login() {
     <>
       <Header/>
       <div className={Styles.logincontainer}>
+        <br></br>
         <h2>Login</h2>
         <form onSubmit={submitDoFormulario}>
           <label for="email">Email: {email}</label>

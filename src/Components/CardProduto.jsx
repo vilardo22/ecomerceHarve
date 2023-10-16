@@ -23,7 +23,7 @@ function CardProduto({ produto }) {
       <img src={produto.image} alt={produto.title} />
       <h3>{produto.title}</h3>
       <p>Preço: R$ {produto.price}</p>
-      <Button variant="outline-secondary" onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Secondary</Button>
+      <Button variant="outline-secondary" onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Comprar</Button>
       {/* <button onClick={() => adicionarProdutoAoCarrinho(produto.id, produto.title, produto.price, produto.category)}>Adicionar ao Carrinho</button> */}
     </div>
   );
