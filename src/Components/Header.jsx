@@ -10,7 +10,7 @@ function Header(props) {
     <Container>
       <Navbar bg="dark" variant="dark" fixed="top">
         <Container>
-          <Navbar.Brand href="/home"><img src={img3} /></Navbar.Brand>
+          <Navbar.Brand href="/"><img src={img3} /></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/produtos">Produtos</Nav.Link>
